@@ -137,7 +137,7 @@ namespace ChibiKyu.StardewMods.FishingAssistant2
             LoadGridData();
 
             // if (!Context.IsMainPlayer) 
-                // this.Helper.Multiplayer.SendMessage(message: this.SecretKey, messageType: "FishingAssistantAuth", modIDs: new[] { "FunnySnek.AntiCheatServer" }, playerIDs: new[] { Game1.MasterPlayer.UniqueMultiplayerID });
+            //     this.Helper.Multiplayer.SendMessage(message: this.SecretKey, messageType: "FishingAssistantAuth", modIDs: new[] { "FunnySnek.AntiCheatServer" }, playerIDs: new[] { Game1.MasterPlayer.UniqueMultiplayerID });
         }
 
         private void OnSaving(object? sender, SavingEventArgs e) { SaveAllGridData(); }
@@ -918,14 +918,20 @@ namespace ChibiKyu.StardewMods.FishingAssistant2
         }
         
         private void UpdateCurrentMapGridRealTime() { GameLocation?
-            loc = Game1.currentLocation; if (loc == null || loc.Map == null) return; string mapName = loc.Name; int w = loc.Map.Layers[0].LayerWidth;
-            int h = loc.Map.Layers[0].LayerHeight; byte[,]? grid; if (!locationNavGrids.TryGetValue(mapName, out grid) || grid.GetLength(0) != w || grid.GetLength(1) != h) { grid = new byte[w, h];
+            loc = Game1.currentLocation; if (loc == null || loc.Map == null) return; string mapName = loc.Name; int 
+w = loc.Map.Layers[0].LayerWidth;
+            int h = loc.Map.Layers[0].LayerHeight; byte[,]? grid; if (!locationNavGrids.TryGetValue(mapName, out 
+grid) || grid.GetLength(0) != w || grid.GetLength(1) != h) { grid = new byte[w, h];
                 locationNavGrids[mapName] = grid; } 
-            for (int x = 0; x < w; x++) { for (int y = 0; y < h; y++) { grid[x, y] = (byte)(IsTileReallyPassable(loc, x, y) ? 0 : 1);
+            for (int x = 0; x < w; x++) { for (int y = 0; y < h; y++) { grid[x, y] = 
+(byte)(IsTileReallyPassable(loc, x, y) ? 0 : 1);
                 } } 
-            if (savedNavGrids.TryGetValue(mapName, out var data)) { if (data.Obstacles != null) foreach (Vector2 obs in data.Obstacles) if (obs.X >= 0 && obs.X < w && obs.Y >= 0 && obs.Y < h) grid[(int)obs.X, (int)obs.Y] = 1;
-                if (data.Walkables != null) foreach (Vector2 walk in data.Walkables) if (walk.X >= 0 && walk.X < w && walk.Y >= 0 && walk.Y < h) grid[(int)walk.X, (int)walk.Y] = 0;
-            } if (tempEdits.TryGetValue(mapName, out var edits)) { foreach (var kvp in edits) { if (kvp.Key.X >= 0 && kvp.Key.X < w && kvp.Key.Y >= 0 && kvp.Key.Y < h) grid[kvp.Key.X, kvp.Key.Y] = kvp.Value;
+            if (savedNavGrids.TryGetValue(mapName, out var data)) { if (data.Obstacles != null) foreach (Vector2 obs 
+in data.Obstacles) if (obs.X >= 0 && obs.X < w && obs.Y >= 0 && obs.Y < h) grid[(int)obs.X, (int)obs.Y] = 1;
+                if (data.Walkables != null) foreach (Vector2 walk in data.Walkables) if (walk.X >= 0 && walk.X < w 
+&& walk.Y >= 0 && walk.Y < h) grid[(int)walk.X, (int)walk.Y] = 0;
+            } if (tempEdits.TryGetValue(mapName, out var edits)) { foreach (var kvp in edits) { if (kvp.Key.X >= 0 
+&& kvp.Key.X < w && kvp.Key.Y >= 0 && kvp.Key.Y < h) grid[kvp.Key.X, kvp.Key.Y] = kvp.Value;
                 } } }
         
         public static Point?
@@ -996,6 +1002,7 @@ namespace ChibiKyu.StardewMods.FishingAssistant2
             } 
             return false;
         }
+
 
         public static bool IsTileReallyPassable(GameLocation location, int x, int y) 
         { 

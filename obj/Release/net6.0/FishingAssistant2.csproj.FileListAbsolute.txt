@@ -1,8 +1,0 @@
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\obj\Release\net6.0\FishingAssistant2.csproj.AssemblyReference.cache
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\obj\Release\net6.0\FishingAssistant2.GeneratedMSBuildEditorConfig.editorconfig
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\obj\Release\net6.0\FishingAssistant2.AssemblyInfoInputs.cache
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\obj\Release\net6.0\FishingAssistant2.AssemblyInfo.cs
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\obj\Release\net6.0\FishingAssistant2.csproj.CoreCompileInputs.cache
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\bin\Release\net6.0\FishingAssistant2.deps.json
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\bin\Release\net6.0\FishingAssistant2.dll
-E:\thien\Downloads\Stardew-SMAPI-Mods-main\Stardew-SMAPI-Mods-main\FishingAssistant2\obj\Release\net6.0\FishingAssistant2.dll
